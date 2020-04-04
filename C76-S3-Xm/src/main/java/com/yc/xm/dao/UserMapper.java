@@ -1,6 +1,7 @@
 package com.yc.xm.dao;
 
 import com.yc.xm.bean.User;
+
 import com.yc.xm.bean.UserExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;

@@ -18,11 +18,6 @@ spring:
         
   
 
-mybatis:
-  #实体类的路径
-  type-aliases-package: com.yc.xm.bean
-  configuration:
-     map-underscore-to-camel-case: true
   
 # 日志配置
 logging:
