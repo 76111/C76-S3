@@ -12,7 +12,7 @@
 		</commentGenerator>
 
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://127.0.0.1/C76-S3-Xm?serverTimezone=UTC&amp;CharacterEncoding=UTF-8&amp;useSSL=false"
+			connectionURL="jdbc:mysql://127.0.0.1/c76-s3-xm?serverTimezone=UTC&amp;CharacterEncoding=UTF-8&amp;useSSL=false"
 			userId="root" password="a">
 			<property name="nullCatalogMeansCurrent" value="true" />
 		</jdbcConnection>
@@ -34,9 +34,37 @@
 
 
 		<!-- % 表示所有表，更改时间类型 -->
-		<table tableName="%">
+		<table tableName="cart">
+			<!-- 配置自增列 -->
+			<generatedKey column="cid" sqlStatement="mysql" identity="true" />
+		</table>
+		<table tableName="comment">
 			<!-- 配置自增列 -->
 			<generatedKey column="id" sqlStatement="mysql" identity="true" />
+		</table>
+		<table tableName="order">
+			<!-- 配置自增列 -->
+			<generatedKey column="oid" sqlStatement="mysql" identity="true" />
+		</table>
+		<table tableName="order_details">
+			<!-- 配置自增列 -->
+			<generatedKey column="orid" sqlStatement="mysql" identity="true" />
+		</table>
+		<table tableName="product">
+			<!-- 配置自增列 -->
+			<generatedKey column="proid" sqlStatement="mysql" identity="true" />
+		</table>
+		<table tableName="product_img">
+			<!-- 配置自增列 -->
+			<generatedKey column="imgsid" sqlStatement="mysql" identity="true" />
+		</table>
+		<table tableName="product_type">
+			<!-- 配置自增列 -->
+			<generatedKey column="pid" sqlStatement="mysql" identity="true" />
+		</table>
+		<table tableName="user">
+			<!-- 配置自增列 -->
+			<generatedKey column="uid" sqlStatement="mysql" identity="true" />
 		</table>
 	</context>
 </generatorConfiguration>
