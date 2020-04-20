@@ -102,22 +102,19 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.yc.xm.bean.Cart">
-    <selectKey keyProperty="cid" order="AFTER" resultType="java.lang.Integer">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into cart (uid, username, pname, 
-      price, number, proid
-      )
-    values (#{uid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{pname,jdbcType=INTEGER}, 
-      #{price,jdbcType=INTEGER}, #{number,jdbcType=INTEGER}, #{proid,jdbcType=INTEGER}
-      )
+    insert into cart (cid, uid, username, 
+      pname, price, number, 
+      proid)
+    values (#{cid,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, 
+      #{pname,jdbcType=INTEGER}, #{price,jdbcType=INTEGER}, #{number,jdbcType=INTEGER}, 
+      #{proid,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.yc.xm.bean.Cart">
-    <selectKey keyProperty="cid" order="AFTER" resultType="java.lang.Integer">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into cart
     <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="cid != null">
+        cid,
+      </if>
       <if test="uid != null">
         uid,
       </if>
@@ -138,6 +135,9 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="cid != null">
+        #{cid,jdbcType=INTEGER},
+      </if>
       <if test="uid != null">
         #{uid,jdbcType=INTEGER},
       </if>

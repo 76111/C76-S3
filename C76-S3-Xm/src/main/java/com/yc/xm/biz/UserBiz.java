@@ -12,7 +12,6 @@ import com.yc.xm.bean.User;
 import com.yc.xm.bean.UserExample;
 import com.yc.xm.dao.UserMapper;
 
-
 @Service
 public class UserBiz {
 	
@@ -36,6 +35,22 @@ public class UserBiz {
 		}
 	}
 	
-
 	
+	public String reg(User user, String repassword) throws BizException {
+
+		UserExample ue = new UserExample();
+		ue.createCriteria().andUsernameEqualTo(user.getUsername());
+
+		if (user.getPassword().equals(repassword) == false) {
+			throw new BizException(101, "password", "密码与确认密码不一致!");
+		}
+
+		if (um.countByExample(ue) > 0) {
+			throw new BizException(102, "username", "该用户名已经被注册!");
+		}
+
+		um.insert(user);
+		return "index";
+
+	}	
 }

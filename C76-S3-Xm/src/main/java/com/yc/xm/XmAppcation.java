@@ -11,5 +11,8 @@ public class XmAppcation {
 	public static void main(String[] args) {
 		SpringApplication.run(XmAppcation.class, args);
 	}
+	
+	
+	
 }
 

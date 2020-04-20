@@ -15,7 +15,9 @@ public class User {
 
     private Integer type;
 
-    private String img;
+    private String nicheng;
+
+    private String interest;
 
     public Integer getUid() {
         return uid;
@@ -73,11 +75,19 @@ public class User {
         this.type = type;
     }
 
-    public String getImg() {
-        return img;
+    public String getNicheng() {
+        return nicheng;
     }
 
-    public void setImg(String img) {
-        this.img = img == null ? null : img.trim();
+    public void setNicheng(String nicheng) {
+        this.nicheng = nicheng == null ? null : nicheng.trim();
+    }
+
+    public String getInterest() {
+        return interest;
+    }
+
+    public void setInterest(String interest) {
+        this.interest = interest == null ? null : interest.trim();
     }
 }

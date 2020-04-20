@@ -102,22 +102,19 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.yc.xm.bean.OrderDetails">
-    <selectKey keyProperty="orid" order="AFTER" resultType="java.lang.Integer">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into order_details (oid, number, img, 
-      pname, price, proid
-      )
-    values (#{oid,jdbcType=INTEGER}, #{number,jdbcType=INTEGER}, #{img,jdbcType=VARCHAR}, 
-      #{pname,jdbcType=VARCHAR}, #{price,jdbcType=DECIMAL}, #{proid,jdbcType=INTEGER}
-      )
+    insert into order_details (orid, oid, number, 
+      img, pname, price, 
+      proid)
+    values (#{orid,jdbcType=INTEGER}, #{oid,jdbcType=INTEGER}, #{number,jdbcType=INTEGER}, 
+      #{img,jdbcType=VARCHAR}, #{pname,jdbcType=VARCHAR}, #{price,jdbcType=DECIMAL}, 
+      #{proid,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.yc.xm.bean.OrderDetails">
-    <selectKey keyProperty="orid" order="AFTER" resultType="java.lang.Integer">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into order_details
     <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="orid != null">
+        orid,
+      </if>
       <if test="oid != null">
         oid,
       </if>
@@ -138,6 +135,9 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="orid != null">
+        #{orid,jdbcType=INTEGER},
+      </if>
       <if test="oid != null">
         #{oid,jdbcType=INTEGER},
       </if>

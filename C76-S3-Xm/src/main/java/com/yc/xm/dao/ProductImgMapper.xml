@@ -102,20 +102,19 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.yc.xm.bean.ProductImg">
-    <selectKey keyProperty="imgsid" order="AFTER" resultType="java.lang.Integer">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into product_img (img1, img2, img3, 
-      img4, img5, img6)
-    values (#{img1,jdbcType=VARCHAR}, #{img2,jdbcType=VARCHAR}, #{img3,jdbcType=VARCHAR}, 
-      #{img4,jdbcType=VARCHAR}, #{img5,jdbcType=VARCHAR}, #{img6,jdbcType=VARCHAR})
+    insert into product_img (imgsid, img1, img2, 
+      img3, img4, img5, img6
+      )
+    values (#{imgsid,jdbcType=INTEGER}, #{img1,jdbcType=VARCHAR}, #{img2,jdbcType=VARCHAR}, 
+      #{img3,jdbcType=VARCHAR}, #{img4,jdbcType=VARCHAR}, #{img5,jdbcType=VARCHAR}, #{img6,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.yc.xm.bean.ProductImg">
-    <selectKey keyProperty="imgsid" order="AFTER" resultType="java.lang.Integer">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into product_img
     <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="imgsid != null">
+        imgsid,
+      </if>
       <if test="img1 != null">
         img1,
       </if>
@@ -136,6 +135,9 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="imgsid != null">
+        #{imgsid,jdbcType=INTEGER},
+      </if>
       <if test="img1 != null">
         #{img1,jdbcType=VARCHAR},
       </if>

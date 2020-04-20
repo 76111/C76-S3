@@ -574,73 +574,143 @@ public class UserExample {
             return (Criteria) this;
         }
 
-        public Criteria andImgIsNull() {
-            addCriterion("img is null");
+        public Criteria andNichengIsNull() {
+            addCriterion("nicheng is null");
             return (Criteria) this;
         }
 
-        public Criteria andImgIsNotNull() {
-            addCriterion("img is not null");
+        public Criteria andNichengIsNotNull() {
+            addCriterion("nicheng is not null");
             return (Criteria) this;
         }
 
-        public Criteria andImgEqualTo(String value) {
-            addCriterion("img =", value, "img");
+        public Criteria andNichengEqualTo(String value) {
+            addCriterion("nicheng =", value, "nicheng");
             return (Criteria) this;
         }
 
-        public Criteria andImgNotEqualTo(String value) {
-            addCriterion("img <>", value, "img");
+        public Criteria andNichengNotEqualTo(String value) {
+            addCriterion("nicheng <>", value, "nicheng");
             return (Criteria) this;
         }
 
-        public Criteria andImgGreaterThan(String value) {
-            addCriterion("img >", value, "img");
+        public Criteria andNichengGreaterThan(String value) {
+            addCriterion("nicheng >", value, "nicheng");
             return (Criteria) this;
         }
 
-        public Criteria andImgGreaterThanOrEqualTo(String value) {
-            addCriterion("img >=", value, "img");
+        public Criteria andNichengGreaterThanOrEqualTo(String value) {
+            addCriterion("nicheng >=", value, "nicheng");
             return (Criteria) this;
         }
 
-        public Criteria andImgLessThan(String value) {
-            addCriterion("img <", value, "img");
+        public Criteria andNichengLessThan(String value) {
+            addCriterion("nicheng <", value, "nicheng");
             return (Criteria) this;
         }
 
-        public Criteria andImgLessThanOrEqualTo(String value) {
-            addCriterion("img <=", value, "img");
+        public Criteria andNichengLessThanOrEqualTo(String value) {
+            addCriterion("nicheng <=", value, "nicheng");
             return (Criteria) this;
         }
 
-        public Criteria andImgLike(String value) {
-            addCriterion("img like", value, "img");
+        public Criteria andNichengLike(String value) {
+            addCriterion("nicheng like", value, "nicheng");
             return (Criteria) this;
         }
 
-        public Criteria andImgNotLike(String value) {
-            addCriterion("img not like", value, "img");
+        public Criteria andNichengNotLike(String value) {
+            addCriterion("nicheng not like", value, "nicheng");
             return (Criteria) this;
         }
 
-        public Criteria andImgIn(List<String> values) {
-            addCriterion("img in", values, "img");
+        public Criteria andNichengIn(List<String> values) {
+            addCriterion("nicheng in", values, "nicheng");
             return (Criteria) this;
         }
 
-        public Criteria andImgNotIn(List<String> values) {
-            addCriterion("img not in", values, "img");
+        public Criteria andNichengNotIn(List<String> values) {
+            addCriterion("nicheng not in", values, "nicheng");
             return (Criteria) this;
         }
 
-        public Criteria andImgBetween(String value1, String value2) {
-            addCriterion("img between", value1, value2, "img");
+        public Criteria andNichengBetween(String value1, String value2) {
+            addCriterion("nicheng between", value1, value2, "nicheng");
             return (Criteria) this;
         }
 
-        public Criteria andImgNotBetween(String value1, String value2) {
-            addCriterion("img not between", value1, value2, "img");
+        public Criteria andNichengNotBetween(String value1, String value2) {
+            addCriterion("nicheng not between", value1, value2, "nicheng");
+            return (Criteria) this;
+        }
+
+        public Criteria andInterestIsNull() {
+            addCriterion("interest is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andInterestIsNotNull() {
+            addCriterion("interest is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andInterestEqualTo(String value) {
+            addCriterion("interest =", value, "interest");
+            return (Criteria) this;
+        }
+
+        public Criteria andInterestNotEqualTo(String value) {
+            addCriterion("interest <>", value, "interest");
+            return (Criteria) this;
+        }
+
+        public Criteria andInterestGreaterThan(String value) {
+            addCriterion("interest >", value, "interest");
+            return (Criteria) this;
+        }
+
+        public Criteria andInterestGreaterThanOrEqualTo(String value) {
+            addCriterion("interest >=", value, "interest");
+            return (Criteria) this;
+        }
+
+        public Criteria andInterestLessThan(String value) {
+            addCriterion("interest <", value, "interest");
+            return (Criteria) this;
+        }
+
+        public Criteria andInterestLessThanOrEqualTo(String value) {
+            addCriterion("interest <=", value, "interest");
+            return (Criteria) this;
+        }
+
+        public Criteria andInterestLike(String value) {
+            addCriterion("interest like", value, "interest");
+            return (Criteria) this;
+        }
+
+        public Criteria andInterestNotLike(String value) {
+            addCriterion("interest not like", value, "interest");
+            return (Criteria) this;
+        }
+
+        public Criteria andInterestIn(List<String> values) {
+            addCriterion("interest in", values, "interest");
+            return (Criteria) this;
+        }
+
+        public Criteria andInterestNotIn(List<String> values) {
+            addCriterion("interest not in", values, "interest");
+            return (Criteria) this;
+        }
+
+        public Criteria andInterestBetween(String value1, String value2) {
+            addCriterion("interest between", value1, value2, "interest");
+            return (Criteria) this;
+        }
+
+        public Criteria andInterestNotBetween(String value1, String value2) {
+            addCriterion("interest not between", value1, value2, "interest");
             return (Criteria) this;
         }
     }

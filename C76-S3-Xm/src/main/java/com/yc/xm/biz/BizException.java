@@ -7,14 +7,14 @@ public class BizException extends Exception{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private String name;
+	private String username;
 	
 	private int code;
 	
-	public BizException(int code,String name,String msg) {
+	public BizException(int code,String username,String msg) {
 		super(msg);
 		this.code=code;
-		this.name=name;
+		this.username=username;
 	}
 
 	public BizException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
@@ -37,12 +37,12 @@ public class BizException extends Exception{
 		// TODO Auto-generated constructor stub
 	}
 
-	public String getName() {
-		return name;
+	public String getusername() {
+		return username;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setusername(String username) {
+		this.username = username;
 	}
 
 	public int getCode() {

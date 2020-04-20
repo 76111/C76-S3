@@ -34,37 +34,9 @@
 
 
 		<!-- % 表示所有表，更改时间类型 -->
-		<table tableName="cart">
-			<!-- 配置自增列 -->
-			<generatedKey column="cid" sqlStatement="mysql" identity="true" />
-		</table>
-		<table tableName="comment">
+		<table tableName="%">
 			<!-- 配置自增列 -->
 			<generatedKey column="id" sqlStatement="mysql" identity="true" />
-		</table>
-		<table tableName="order">
-			<!-- 配置自增列 -->
-			<generatedKey column="oid" sqlStatement="mysql" identity="true" />
-		</table>
-		<table tableName="order_details">
-			<!-- 配置自增列 -->
-			<generatedKey column="orid" sqlStatement="mysql" identity="true" />
-		</table>
-		<table tableName="product">
-			<!-- 配置自增列 -->
-			<generatedKey column="proid" sqlStatement="mysql" identity="true" />
-		</table>
-		<table tableName="product_img">
-			<!-- 配置自增列 -->
-			<generatedKey column="imgsid" sqlStatement="mysql" identity="true" />
-		</table>
-		<table tableName="product_type">
-			<!-- 配置自增列 -->
-			<generatedKey column="pid" sqlStatement="mysql" identity="true" />
-		</table>
-		<table tableName="user">
-			<!-- 配置自增列 -->
-			<generatedKey column="uid" sqlStatement="mysql" identity="true" />
 		</table>
 	</context>
 </generatorConfiguration>
